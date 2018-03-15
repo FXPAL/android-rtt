@@ -118,14 +118,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         scanResults = wifiManager.getScanResults();
         size = scanResults.size();
 
-        //int count = RangingRequest.getMaxPeers();
-        List<ScanResult> newScanResults = new ArrayList<ScanResult>();
-        for (int i = 0; i < scanResults.size(); i++) {
-            ScanResult result = scanResults.get(i);
-            if (result.SSID.equals("PALWIFI")) {
-                newScanResults.add(result);
-            }
-        }
+        // Filter out PALWIFI acess points only
+//        List<ScanResult> newScanResults = new ArrayList<ScanResult>();
+//        for (int i = 0; i < scanResults.size(); i++) {
+//            ScanResult result = scanResults.get(i);
+//            if (result.SSID.equals("PALWIFI")) {
+//                newScanResults.add(result);
+//            }
+//        }
+        List<ScanResult> newScanResults = scanResults;
 
         //scanResults = scanResults.subList(0, min(scanResults.size(), RangingRequest.getMaxPeers()));
         scanResults = newScanResults.subList(0, min(newScanResults.size(), RangingRequest.getMaxPeers()));
