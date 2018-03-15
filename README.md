@@ -11,5 +11,14 @@ Build
 -----
 
 ```
-$ ./gradle build
+$ ./gradle assembleDebug
+$ ./gradle assembleRelease
+```
+
+Install
+-----
+
+```
+$ ./gradle installDebug
+$ ./gradle installRelease
 ```
