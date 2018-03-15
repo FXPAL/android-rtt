@@ -4,7 +4,7 @@ android {
     compileSdkVersion 'android-P'
     defaultConfig {
         applicationId "com.fxpal.android_rtt"
-        minSdkVersion 'P'
+        minSdkVersion 28
         targetSdkVersion 'P'
         versionCode 1
         versionName "1.0"
